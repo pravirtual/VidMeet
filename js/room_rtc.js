@@ -212,15 +212,17 @@ let toggleScreen = async (e) => {
     }
 }
 
-// let leaveStream = async() => {
-//     handleUserLeft
-//     handleMemberLeft
-// }
+let leaveStream = async() => {
+    await channel.leave()
+    await rtmClient.logout()
+    await client.leave()
+    window.location.href = '/lobby.html'
+}
 
 
 document.getElementById('camera-btn').addEventListener('click', toggleCamera)
 document.getElementById('mic-btn').addEventListener('click', toggleMic)
 document.getElementById('screen-btn').addEventListener('click', toggleScreen)
-// document.getElementById('leave-btn').addEventListener('click', leaveStream)
+document.getElementById('leave-btn').addEventListener('click', leaveStream)
 
 joinRoomInit()
