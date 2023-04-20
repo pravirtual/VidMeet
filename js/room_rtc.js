@@ -216,7 +216,7 @@ let leaveStream = async() => {
     await channel.leave()
     await rtmClient.logout()
     await client.leave()
-    window.location.href = '/lobby.html'
+    window.location.href = '/index.html'
 }
 
 
