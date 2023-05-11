@@ -219,10 +219,20 @@ let leaveStream = async() => {
     window.location.href = 'index.html'
 }
 
+function typeNote(){
+    if(sticky__note.style.display == "none"){
+        sticky__note.style.display = "block" ;
+    }
+    else{
+        sticky__note.style.display = "none";
+    }
+}
 
 document.getElementById('camera-btn').addEventListener('click', toggleCamera)
 document.getElementById('mic-btn').addEventListener('click', toggleMic)
 document.getElementById('screen-btn').addEventListener('click', toggleScreen)
 document.getElementById('leave-btn').addEventListener('click', leaveStream)
+document.getElementById('sticky-note').addEventListener('click', typeNote)
+document.getElementById('x-icon').addEventListener('click', typeNote)
 
 joinRoomInit()

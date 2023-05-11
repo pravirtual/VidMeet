@@ -5,6 +5,37 @@
   position: relative;
 }
 
+#sticky__note{
+  display: none;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  padding: 10px;
+  z-index: 9999;
+}
+
+#note-text{
+  outline: none;
+  border: none;
+  width: 18rem;
+  height: 18rem;
+  padding: 10% 2% 5% 5%;
+  font-size: 18px;
+  background-color: #daf7a1;
+}
+
+#x-icon{
+  color: gray;
+  position: absolute;
+  top: 4%;
+  right: 0;
+  font-size:1.5rem;
+}
+
+#x-icon:hover{
+  cursor: pointer;
+}
+
 #room__container {
   position: relative;
   display: flex;
@@ -326,8 +357,13 @@
   transition: all 0.2s ease-in-out;
 }
 
+.stream__actions button img{
+  background-color: white;
+}
+
 .stream__actions a svg,
-.stream__actions button svg {
+.stream__actions button svg,
+.stream__actions button img {
   width: 1.5rem;
   height: 1.5rem;
   fill: #ede0e0;
@@ -338,4 +374,8 @@
 .stream__actions a:hover,
 .stream__actions button:hover {
   background-color: #009FBD;
+}
+
+.stream__actions img:hover{
+  color: #009FBD
 }
